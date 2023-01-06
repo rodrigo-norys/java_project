@@ -15,30 +15,46 @@ public class Approved {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-	
-		System.out.print("How many student do you want to know? ");
-		int moments = sc.nextInt();
-		ApprovedClass moment[] = new ApprovedClass[moments];
 		
+		// Informar a quantidade de alunos
+		System.out.print("How many student do you want to know? ");
+		int students = sc.nextInt();
+		
+		// Vetor criado com o tipo 'ApprovedClass', para que consigamos acessar 
+		// seus atributos e classes para cada aluno que definirmos
+		ApprovedClass student[] = new ApprovedClass[students];
+		
+		// Variável criada para conseguir concatenar o nome dos alunos aprovados
 		String aproved = "";
 		
-		for (int i=0; i<moment.length; i++) {
-			System.out.println("Tell us the name, first and second avaliation from " + (i+1) + " student");
+		for (int i=0; i<student.length; i++) {
+			System.out.println("Tell us the name. After this, the first and second avaliation from " + (i+1) + " student");
 			sc.nextLine();
+			
+			// Informar o nome
 			System.out.print("Name: ");
 			String name = sc.nextLine();
+			
+			// Informar a média do 1º semestre
 			System.out.print("1st Semester: ");
 			double semester1 = sc.nextDouble();
+			
+			// Informar a média do 2º semestre
 			System.out.print("2nd Semester: ");
 			double semester2 = sc.nextDouble();
 			
 			System.out.println();
-			moment[i] = new ApprovedClass(name, semester1, semester2);	
 			
-			moment[i].Average(); // Fórmula da Média Aritmética
+			// Construtor nos dando a segurança de que cada dado do aluno será informado
+			student[i] = new ApprovedClass(name, semester1, semester2);	
 			
-			if (moment[i].Average() >= 6.0) {
-				aproved += moment[i].getName() + "\n";
+			// Método da fórmula da média aritmética
+			student[i].Average();
+			
+			// Condição que verifica a média do aluno e sendo verdadeira
+			// Nos retorna os nomes dos alunos aprovados
+			if (student[i].Average() >= 6.0) {
+				aproved += student[i].getName() + "\n";
 			}
 		}
 		
