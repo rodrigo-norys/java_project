@@ -53,7 +53,7 @@ public class Arrays2 {
 						count++;
 					}
 					
-					// Retorna o valor acima se existir
+					// Retorna o valor acima se existir 
 					if (i > 0) {
 						System.out.println("Up: " + matrix[i - 1][j]);
 						count++;

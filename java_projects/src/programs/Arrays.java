@@ -17,8 +17,8 @@ public class Arrays {
 		
 		int count = 0;
 		
-		// Estrutura de repetição para ler cada posição da matriz 
-		// Para em seguida nos retornar a Diagonal Principal
+		// Estrutura de repetição para ler cada posição da matriz
+		// Para em seguida nos retornar a Diagonal Principal 
 		for (int i = 0; i < mat.length; i++) {
 			for (int j = 0; j < mat[i].length; j++) {
 				mat[i][j] = sc.nextInt();
