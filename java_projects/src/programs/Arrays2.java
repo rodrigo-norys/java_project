@@ -49,27 +49,24 @@ public class Arrays2 {
 					
 					// Retorna o valor a esquerda se existir
 					if (j > 0) {
-						System.out.println("Left: " + matrix[i][j - 1]);
-						count++;
+						System.out.println("Left: " + matrix[i][j - 1]);			
 					}
 					
 					// Retorna o valor acima se existir 
 					if (i > 0) {
-						System.out.println("Up: " + matrix[i - 1][j]);
-						count++;
+						System.out.println("Up: " + matrix[i - 1][j]);				
 					}
 					
 					// Retorna o valor a direita se existir
 					if (j < matrix[i].length - 1) {
-						System.out.println("Right: " + matrix[i][j + 1]);
-						count++;
+						System.out.println("Right: " + matrix[i][j + 1]);				
 					}
 					
 					// Retorna o valor abaixo se existir
 					if (i < matrix.length - 1) {
 						System.out.println("Down: " + matrix[i + 1][j]);
-						count++;
-					}			
+					}
+					count++;
 				}
 			}
 		}
