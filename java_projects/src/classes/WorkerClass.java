@@ -81,7 +81,10 @@ public class WorkerClass {
 	}
 	
 	public double income(int year, int month) {
+		
+		// A variável sum irá receber o baseSalary
 		double sum = baseSalary;
+		
 		
 		Calendar incomeDate = Calendar.getInstance();
 		
