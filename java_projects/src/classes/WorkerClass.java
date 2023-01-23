@@ -85,15 +85,21 @@ public class WorkerClass {
 		// A variável sum irá receber o baseSalary
 		double sum = baseSalary;
 		
-		
+		// Pegamos agora a data local e guardamos na variável incomeDate
 		Calendar incomeDate = Calendar.getInstance();
 		
+		// Um foreach para ler todos os atributos dos objetvos que estiverem na lista
 		for (WorkerContractClass itContract : contracts) {
+			
+			// Irá ler todas as datas dos obtejos da lista
 			incomeDate.setTime(itContract.getDate());
 			
+			// Atribuindo o ano e mês respectivamente as suas variáveis
 			int itContract_year = incomeDate.get(Calendar.YEAR);
 			int itContract_month = 1 + incomeDate.get(Calendar.MONTH);
 			
+			// Aqui irá fazer a soma dos valores atribuídos a um mês e ano específico, ou seja,
+			// Irá nos retornar todo o dinheiro que aquele funcionário acumulou em um período
 			if (year == itContract_year && month == itContract_month) {
 				sum += itContract.totalValue();
 			}
